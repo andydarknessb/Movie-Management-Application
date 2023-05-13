@@ -15,4 +15,20 @@ function MovieDetails() {
     const goBackToList = () => {
         history.push('/');
     };
+
+    return (
+        <div>
+            <h2>{movie.title}</h2>
+            <img src={movie.poster} alt={movie.title} />
+            <p>{movie.description}</p>
+            <ul>
+                {movie.genres.map((genre, index) => (
+                    <li key={index}>{genre.name}</li>
+                ))}
+            </ul>
+            <button onClick={goBackToList}>Back to list</button>
+        </div>
+    );
 }
+
+export default MovieDetails;
