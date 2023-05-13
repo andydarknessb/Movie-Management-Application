@@ -27,8 +27,21 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
-}
+
+    function* fetchMovieDetails(action) {
+        try{
+            const MovieDetails = yield axios.get(`/api/movie/${action.payload}`);
+            yield put({ type: 'SET_MOVIE_DETAILS', payload: MovieDetails.data });
+
+            const genres = yield axios.get(`/api/genre/${action.payload}`);
+            yield put({ type: 'SET_GENRES', payload: genres.data });
+
+        } catch (error) {
+            console.log('Error fetching movie details:', error);
+        }
+
+        }
+    }
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
