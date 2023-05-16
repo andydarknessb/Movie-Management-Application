@@ -23,7 +23,7 @@ function MovieList() {
                 <div key={movie.id}>
                   <div className="movie-info">
                   <h3>{movie.title}</h3>
-                  <p>{movie.description}</p>
+                  
                   </div>
                   <Link to={`/details/${movie.id}`}>
                     <img src={movie.poster} alt={movie.title} />
