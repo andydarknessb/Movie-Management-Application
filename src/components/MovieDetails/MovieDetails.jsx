@@ -6,7 +6,7 @@ function MovieDetails() {
     const dispatch = useDispatch();
     const history = useHistory();
     const { id } = useParams();
-    const movie = useSelector((store) => store.selectedMovie);
+    const movie = useSelector((store) => store.selectedMovie || {});
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIE_DETAILS', payload: id });
@@ -16,13 +16,14 @@ function MovieDetails() {
         history.push('/');
     };
 
+
     return (
         <div>
             <h2>{movie.title}</h2>
             <img src={movie.poster} alt={movie.title} />
             <p>{movie.description}</p>
             <ul>
-                {movie.genres.map((genre, index) => (
+                {movie.genres && movie.genres.map((genre, index) => (
                     <li key={index}>{genre.name}</li>
                 ))}
             </ul>
