@@ -59,14 +59,16 @@ const movies = (state = { list: [], selectedMovie: {genres: [] } }, action) => {
     }
 }
 
-const selectedMovie = (state = {}, action) => {
+const selectedMovie = (state = {gernres: [ ]}, action) => {
     switch (action.type) {
         case 'SET_MOVIE_DETAILS':
-            return action.payload;
+            return { ...state, ...action.payload };
+            case 'SET_GENRES':
+                return { ...state, genres: action.payload };
             default:
                 return state;
     }
-}
+};
 
 // Used to store the movie genres
 const genres = (state = [], action) => {

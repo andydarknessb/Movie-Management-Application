@@ -22,6 +22,7 @@ function MovieDetails() {
             <h2>{movie.title}</h2>
             <img src={movie.poster} alt={movie.title} />
             <p>{movie.description}</p>
+            <h3>Genres</h3>
             <ul>
                 {movie.genres && movie.genres.map((genre, index) => (
                     <li key={index}>{genre.name}</li>
