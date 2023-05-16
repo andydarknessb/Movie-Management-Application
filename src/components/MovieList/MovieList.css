@@ -45,9 +45,25 @@ h1 {
     margin-bottom: 10px;
 }
 
+.movie-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 img {
     max-width: 100%;
     max-height: 400px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
