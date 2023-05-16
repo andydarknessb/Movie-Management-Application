@@ -1,0 +1,33 @@
+/* MovieDetails.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.movie-description {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.movie-genres {
+    font-size: 1.5rem;
+}
+
+.genre-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.genre-item {
+    font-size: 1.2rem;
+}
+
+.back-button {
+    margin-top: 1rem;
+}

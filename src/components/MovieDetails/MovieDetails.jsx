@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
+
 function MovieDetails() {
     const dispatch = useDispatch();
     const history = useHistory();
