@@ -43,7 +43,7 @@ Before running the project, you'll need to have the following installed:
 
 ## Authors
 
-- Your Name - Cory Anderson - [YourGitHubUsername](https://github.com/andydarknessb)
+Cory Anderson - (https://github.com/andydarknessb)
 
 ## Acknowledgments
 
