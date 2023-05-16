@@ -26,6 +26,8 @@ function* fetchAllMovies() {
 
     } catch {
         console.log('get all error');
+     }
+    
     }
 
     function* fetchMovieDetails(action) {
@@ -40,8 +42,7 @@ function* fetchAllMovies() {
             console.log('Error fetching movie details:', error);
         }
 
-        }
-    }
+     }
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
@@ -58,7 +59,7 @@ const movies = (state = [], action) => {
     }
 }
 
-const MovieDetails = (state = {}, action) => {
+const selectedMovie = (state = {}, action) => {
     switch (action.type) {
         case 'SET_MOVIE_DETAILS':
             return action.payload;
@@ -82,7 +83,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
-        MovieDetails,
+        selectedMovie,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
