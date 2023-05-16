@@ -20,6 +20,7 @@ function MovieList() {
               return (
                 <div key={movie.id}>
                   <h3>{movie.title}</h3>
+                  <p>{movie.description}</p>
                   <Link to={`/details/${movie.id}`}>
                     <img src={movie.poster} alt={movie.title} />
                   </Link>
